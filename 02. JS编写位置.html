@@ -4,13 +4,30 @@
 <meta charset = "UTF-8">
 <title>
 </title>
-    <scirpt type = "text/javascript">
+
+
+<!---可以将js代码编写到外部js文件中，然后通过script标签引入
+	写到外部文件中可以在不同的页面中同时引用，也可以利用到游览器的缓存机制推荐使用的方式
+	--->
+
+
+<!---script标签一旦用于引入外部文件了，就不能在编写代码了，即使编写了游览器也会忽略，如果需要则可以再创建一个新的script标签用于编写内部代码
+	--->
+<script type = "text/javascript" src = "./script.js"></script>
+<script type = "text/javascript">
+
+	alert("我是内部的js代码");
+</script>
+
+    <!--
+    	可以将js代码编写到script标签
+
+     <script type = "text/javascript">
     
+      alert("我是script标签中的代码！！！！");
     
-    
-    
-    
-    </scirpt>
+    </script> 
+-->
 </head>
 <body>
 
