@@ -55,6 +55,24 @@
 		*/
 		a = parseInt(a);
 
+
+		/*
+		*parseFloat()作用和parseInt()类似, 不同的是它可以获得有效的小数
+		*
+		*/
+		a = "123.456px";
+		a = parseFloat(a);
+
+		/*
+		*
+		*如果对非String使用parseInt()或parseFloat(), 它会先将其转为String然后再操作
+		*
+		*/
+
+		a = true;
+		a = parseInt(a);
+
+
 		 console.log(typeof a);
 		 console.log(a);
 	</script>
