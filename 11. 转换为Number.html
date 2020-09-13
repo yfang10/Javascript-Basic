@@ -14,6 +14,13 @@
 		*2. 如果字符串中有非数字的内容, 则转换为NaN
 		*3. 如果字符串是一个空串或者是一个全是空格的字符串, 则转换为0
 		*
+		*- 布尔--->数字
+		*true 转成1
+		*false 转成0
+		*
+		*- Null--->数字 结果为0
+		*
+		*- Undefined --->数字  结果为NaN
 		*/
 
 		var a = '123';
@@ -25,6 +32,13 @@
 
 		a = true;
 		a = Number(a);
+
+		a = null;
+		a = Number(a);
+
+		a = undefined;
+		a = Number(a);
+
 		 console.log(typeof a);
 		 console.log(a);
 	</script>
