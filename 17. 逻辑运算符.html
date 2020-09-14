@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>
+	</title>
+	<script type = "text/javascript">
+		
+		/*
+		*! 取反 
+		*- 对非布尔值进行取反，则会将其先转换为布尔值, 然后再进行取反, 可以利用其特点，将其他类型转换为布尔值
+		*- 对一个值取反两次, 则不会有任何变化
+		*
+		*
+		*&& 与
+		*- 两个值中只要有一个值为false就返回false, 只有两个值都是true才能返回true
+		*
+		*- JS中的"与"属于短路的与, 如果第一个值为false, 则不会再看第二个值。 第一个值为true会检查第二个值, 第一值为false, 不会检查第二个值
+		*
+		*
+		*|| 或
+		*- 两个值中只要有一个true就返回true, 只有两个都是false, 才返回false
+		*- JS的"或"属于短路的或, 如果第一个值为true, 则不会检查第二个值; 第一个值为false才会检查第二个值
+		*/ 
+
+
+		//如果两个值都是true则返回true, 只要有一个false, 则返回false
+		var result = true && true;
+		var result = true && false;
+		var result = false && false;
+		console.log("result = " + result);
+
+
+		//取反
+		var b = 10;
+		b = !!b;
+		 console.log("b = " + b);
+		 console.log(typeof b);
+
+
+		 //或
+		 var result = false || false;
+		 var result = true || true;
+		 var result = true || false;
+	</script>
+</head>
+<body>
+	</body>
+	</html>
