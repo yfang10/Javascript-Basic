@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>
+	</title>
+	<script type = "text/javascript">
+		/*
+		通过程序, 在页面中输出如下的图形:
+
+		*
+		**
+		***
+		****
+		*****
+
+
+		*****
+		*****
+		*****
+		*****
+		*****
+
+
+		*****
+		****
+		***
+		**
+		*
+
+		*/
+
+
+		/*
+		*在循环的内部再创建一个循环, 用来控制图形的宽度
+		*目前我们的外部的for循环执行1次, 内部循环就会执行5次
+		*内层循环可以来决定图形的宽度, 执行几次图形的宽度就是多少次
+		*/
+
+
+	// 	for(var i = 0; i < 5; i++){
+	// 		for(var j = 0; j < 5; j++){
+	// 		document.write("*");
+	// 	}
+	// 	document.write("<br/>");
+	// }
+
+	// for(var i = 0; i < 5; i++){
+	// 		for(var j = 0; j < i + 1; j++){
+	// 		document.write("*");
+	// 	}
+	// 	document.write("<br/>");
+	// }
+
+// for(var i = 0; i < 5; i++){
+// 			for(var j = 0; j < 5 - i; j++){
+// 			document.write("*");
+// 		}
+// 		document.write("<br/>");
+// 	}
+
+
+/*
+*
+*1. 打印99乘法表
+*
+*/
+
+// for(var i = 1; i <= 9; i++){
+// 	for(var j = 1; j <= i; j++){
+// 		document.write("<span>" + j + "*" + i + "=" + i * j + "</span>");
+// 	}
+// 	document.write("<br/>")
+// }
+
+
+
+/*
+*
+*打印1-100之间所有的质数
+*
+*
+*/
+for(var i = 2; i <= 100; i++){
+
+
+	//创建一个布尔值, 用来保存结果, 默认i是质数
+	var flag = true;
+	//判断i是否是质数
+	for(var j = 2; j < i; j++){
+
+
+		if(i % j == 0){
+			//如果进入判断, 则证明i不是质数
+			flag = false;
+		}
+	}
+	//如果是质数, 则打印i的值
+	if(flag){
+		console.log(i)
+	}
+	
+}
+
+</script>
+<!-- <style type = "text/css">
+	span{
+		display: inline-block;
+		width: 80px;
+	}
+
+
+
+
+</style> -->
+</head>
+<body>
+	</body>
+	</html>
