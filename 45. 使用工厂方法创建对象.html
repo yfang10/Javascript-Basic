@@ -22,13 +22,13 @@
 		*使用工厂方法创建对象, 通过该方法可以大批量创建对象
 		*/
 
-		function createObject(){
+		function createObject(name, age, gender){
 			var obj = new Object();
 
 			//向对象中添加属性
-			obj.name = "swk";
-			obj.age = 18;
-			obj.gender = "男";
+			obj.name = name;
+			obj.age = age;
+			obj.gender = gender;
 			obj.sayName = function(){
 				alert(this.name);
 			};
@@ -38,9 +38,9 @@
 
 		}
 
-		var obj2 = createObject();
-		var obj3 = createObject();
-		var obj4 = createObject();
+		var obj2 = createObject("swk", 18, "男");
+		var obj3 = createObject("hhe", 6, "男");
+		var obj4 = createObject("lsj", 20, "女");
 
 		
 		console.log(obj2);
