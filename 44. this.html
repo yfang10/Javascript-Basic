@@ -14,37 +14,62 @@
 		*2. 以方法的形式调用时, this就是调用方法的那个对象
 		*/
 
-		function fun(a, b){
-			//console.log("a = " + a + ", b = " + b);
-			console.log(this);
+		// function fun(a, b){
+		// 	//console.log("a = " + a + ", b = " + b);
+		// 	console.log(this);
 
-		}
+		// }
 
-		fun();
+		// fun();
 
-		//创建一个对象
-		var obj = {
-			name: "swk", 
-			sayName: fun
+		// //创建一个对象
+		// var obj = {
+		// 	name: "swk", 
+		// 	sayName: fun
 
-		};
+		// };
 
-		var obj2 = {
-			name: "shs";
-			sayName: fun
+		// var obj2 = {
+		// 	name: "shs";
+		// 	sayName: fun
 
-		};
+		// };
 
 
 		// console.log(obj.sayName == fun);
-		var name = "全局的name属性";
+		// var name = "全局的name属性";
 
+		// //obj.sayName();
+		// //以函数形式调用, this是window
+		// // fun();
+
+		// //以方法的形式调用, this是调用方法的对象
+		// obj.sayName();
+
+
+		//创建一个name变量
+		var name = "全局";
+
+		//创建一个fun()函数
+		function fun(){
+			console.log(this.name);
+		}
+
+		//创建两个对象
+		var obj = {
+			name: "swk",
+			sayName: fun
+		};
+
+		var obj2 = {
+			name: "shs",
+			sayName: fun
+				
+			};
+
+		//我们希望调用obj.sayName()时可以输出obj的名字
 		//obj.sayName();
-		//以函数形式调用, this是window
-		// fun();
-
-		//以方法的形式调用, this是调用方法的对象
-		obj.sayName();
+		obj2.sayName();
 </script>
 </head>
 <body>
