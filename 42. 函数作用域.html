@@ -36,13 +36,49 @@
 		//console.log("b = "+b);
 
 		/*
-		*在函数作用域中也有声明提前
+		*在函数作用域中也有声明提前的特性, 使用var关键字声明的变量, 会在函数中所有的代码执行之前被声明
 		*
+		*函数声明也会在函数中所有的代码执行之前执行
 		*/
 
 		function fun3(){
-			console.log(a);
+			// console.log(a);
+			var a = 35;
+
+			function fun4(){
+				alert("I am fun4");
+
+			}
 		}
+		// fun3();
+
+		var c = 33;
+
+		/*
+		*在函数中, 不使用var声明的变量都会成为全局变量
+		*/ 
+
+		function fun5(){
+			console.log(" c = "+ c);
+			c = 10;
+
+		}
+
+		fun5();
+
+		//在全局输出c
+		// console.log("c = " + c);
+
+		var e = 23;
+		/*
+		*定义形参就相当于在函数作用域中声明了变量
+		*
+		*/
+
+		function fun6(e){
+			alert(e);
+		}
+		fun6();
 </script>
 </head>
 <body>
