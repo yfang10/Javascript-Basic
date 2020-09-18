@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>
+	</title>
+	<script type = "text/javascript">
+		/*
+		*创建一个对象
+		*
+		*/
+		var obj = {
+			name: "swk",
+			age: 18,
+			gender: "男",
+			sayName: function(){
+				alert(this.name);
+			}
+		};
+
+		/*
+		*使用工厂方法创建对象, 通过该方法可以大批量创建对象
+		*/
+
+		function createObject(){
+			var obj = new Object();
+
+			//向对象中添加属性
+			obj.name = "swk";
+			obj.age = 18;
+			obj.gender = "男";
+			obj.sayName = function(){
+				alert(this.name);
+			};
+
+			//将新的对象返回
+			return obj;
+
+		}
+
+		var obj2 = createObject();
+		var obj3 = createObject();
+		var obj4 = createObject();
+
+		
+		console.log(obj2);
+		console.log(obj3);
+		console.log(obj4);
+</script>
+</head>
+<body>
+	</body>
+	</html>
