@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>
+	</title>
+	<script type = "text/javascript">
+		/*
+		*解析器在调用函数每次都会向函数内部传递进一个隐含的参数
+		*这个隐含的参数就是this
+		*/
+
+		function fun(a, b){
+			//console.log("a = " + a + ", b = " + b);
+			console.log(this);
+
+		}
+
+		fun(123, 456);
+</script>
+</head>
+<body>
+	</body>
+	</html>
