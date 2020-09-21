@@ -15,13 +15,23 @@
 		*构造函数和普通函数的区别就是调用方式的不同
 		*普通函数是直接调用, 而构造函数需要使用new关键字来调用
 		*
+		*构造函数的执行流程:
+		*1. 立刻创建一个新的对象
+		*2. 蒋新建的对象设置为函数中this, 在构造函数中可以使用this来引用新建的对象
+		*3. 逐行执行函数的代码
+		*4.将新建的对象作为返回值返回
+		*
 		*/
 
+
+		
+
 		function Person(){
+			this.name = "swk"
 
 		}
 		var person = new Person();
-		console.log(person);
+		console.log(person.name);
 		
 </script>
 </head>
