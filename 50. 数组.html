@@ -58,9 +58,34 @@
        /*
        *
        *  获取数组的长度
+       * 可以使用length属性来获取数组的长度(元素的个数)
+       * 语法：数组.length
        * 
        * 
+       * 对于连续的数组, 使用length可以获取到数组的长度(元素的个数)
+       * 对于非连续的数组, 使用length会获取到最大的索引+1
+       *        尽量不要创建非连续的数组
        */
+
+       //console.log(arr.length);
+       console.log(arr);
+
+       /*
+       * 修改length
+       *    如果修改的length大于原长度, 则多出来的部分会空出来
+       *    如果修改的length小于原长度, 则多出来的元素会被删除
+       */
+
+    //    arr.length = 10;
+
+    //    console.log(arr.length);
+    //    console.log(arr);
+
+    //向数组的最后一个位置添加元素
+    //语法：数组[数组.length] = 值;
+    arr[arr.length] = 70;
+
+    console.log(arr);
 
         </script>
         </head>
