@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>
+	</title>
+	<script type = "text/javascript">
+		
+		/*
+		*
+		*
+		*运算符也叫操作符
+		*通过运算符可以对一个或多个值进行运算, 并获取运算结果
+		*比如: typeof 就是运算符, 可以获得一个值的类型, 它会将该值的类型以字符串的形式返回
+		*
+		*
+		*算数运算符
+		*
+		*当对非Number类型的值进行运算时, 会将这些值转换为Number进行运算, 任何数与NaN进行运算, 都是NaN
+		*+ - * / %
+		*如果对于两个字符串进行加法运算, 则会做拼串, 将两个字符串拼接成一个字符串, 并返回
+		*
+		*任何值和字符串做加法运算, 都会先转换为字符串, 然后再和字符串做拼串操作
+		*可以利用这一个特点, 来将任意一个数据类型转换成String, 只需要为任意的数据类型 + 一个""即可将其转换为String, 这是一种隐式的类型转换, 由游览器自动完成, 实际上它也是调用String()函数
+		*/
+
+		var a = 123;
+		var result = typeof a;
+		//console.log(typeof result);
+		result = true + 1;
+		result = true + false;
+		result = 2 + NaN;
+		result = 2 + null;
+		result = "123" + "456";
+
+		var str = "asdcefg" +
+		          "bscdefd" + 
+		          "adsdfed";
+
+		console.log(str);
+
+		var c = 123;
+		c = c + "";
+		console.log("c =" + c);
+
+		result = 1 + 2 + "3"; //"33"
+		result = "1" + 2 + 3; //"123"
+		console.log("result =" + result);
+
+	</script>
+</head>
+<body>
+	</body>
+	</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>
+	</title>
+	<script type = "text/javascript">
+		/*
+		*打印1-100之间所有7的倍数的个数及总和
+		*
+		*/
+		// var sum = 0;
+		// var count = 0;
+		// for(var i = 1; i <= 100; i++){
+
+		// 	//判断是否是7的倍数
+		// 	if(i % 7 == 0){
+
+		// 		sum += i;
+		// 		count++;
+
+		// 	}
+		// }
+		// console.log("总和为: " +sum);
+		// console.log("总个数为： " +count);
+
+
+		/*
+		*水仙花数是一个三位数, 它的每个位上的数字的3次幂之和等于它本身。(例如: 1^3 + 5^3 + 3^3 = 153), 请打印所有的水仙花数。
+		*
+		*/
+
+		//打印所有的三位数
+		// for(var i = 100; i < 1000; i++){
+
+		// 	var a = parseInt(i / 100);
+
+		// 	var b = parseInt((i - a *
+		// 		 100) / 10);
+
+		// 	var c = i % 10;
+
+		// 	if(a * a * a + b * b * b + c * c * c == i){
+		// 		console.log(i);
+
+		// 	}
+		// }
+
+
+		/*
+		*在页面中接收一个用户输入的数字, 并判断该数是否是质数。 
+		*质数: 只能被1和它自身整除的数, 1既不是质数也不是合数, 质数必须是大于1的自然数。
+		*
+		*/
+
+		var num = prompt("请输入一个大于1的整数:");
+
+		//创建一个变量来保存当前的数的状态
+		//默认当前num是质数
+		var index = true;
+
+		for(var i = 2; i < num; i++){
+			//判断num是否能被i整数
+			if(num % i == 0){
+				//如果num能被i整除, 则说明num一定不是质数
+				//设置index为false
+				index = false;
+			}
+		}
+
+		//如果num是质数则输出
+		if(index){
+			alert(num + "是质数！！！！");
+		}else{
+			alert("不是质数！！！！");
+		}
+
+</script>
+</head>
+<body>
+	</body>
+	</html>
